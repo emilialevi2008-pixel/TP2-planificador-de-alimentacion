@@ -9,7 +9,7 @@ def cargar_recetas():
         recetas = json.load(archivo)
 
     return recetas
-def generar_menu_semanal(recetas, comidas_seleccionadas):
+def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos):
     dias = [
         "Lunes", "Martes", "Miercoles",
         "Jueves", "Viernes", "Sabado", "Domingo"
@@ -25,8 +25,12 @@ def generar_menu_semanal(recetas, comidas_seleccionadas):
             recetas_disponibles = [
                 receta for receta in recetas
                 if receta["tipo"] == comida
+                and not any(
+                    excluido.lower() in ingrediente["nombre"].lower()
+                    for ingrediente in receta["ingredientes"]
+                    for excluido in ingredientes_excluidos
+                )
             ]
-
             if not recetas_disponibles:
                 print(f"No hay recetas disponibles para {comida}.")
                 continue
@@ -155,8 +159,21 @@ def main():
 
     print(f"Tu presupuesto semanal es de ${presupuesto:,.2f}")
 
-    menu_semanal = generar_menu_semanal(recetas, comidas_seleccionadas)
+    print("\nINGREDIENTES EXCLUIDOS")
 
+    respuesta = input(
+        "¿Que ingredientes queres excluir? "
+        "(separados por comas, o Enter para ninguno): "
+    )
+
+    ingredientes_excluidos = [
+        ingrediente.strip().lower()
+        for ingrediente in respuesta.split(",")
+        if ingrediente.strip()
+    ]
+    menu_semanal = generar_menu_semanal(
+        recetas, comidas_seleccionadas, ingredientes_excluidos
+    )
     print("\nMENU SEMANAL GENERADO")
 
     for dia, comidas in menu_semanal.items():
