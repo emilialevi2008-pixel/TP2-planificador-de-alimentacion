@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tostadas con huevo",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {"nombre": "Pan integral", "cantidad": 2, "unidad": "rebanadas"},
+      {"nombre": "Huevo", "cantidad": 2, "unidad": "unidades"}
+    ],
+    "tiempo_minutos": 10,
+    "costo_estimado": 1800,
+    "calorias": 320,
+    "proteinas": 19,
+    "carbohidratos": 28,
+    "grasas": 14,
+    "preparacion": "Tostar el pan, cocinar los huevos y servir."
+  },
+  {
+    "id": 2,
+    "nombre": "Pollo con arroz",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {"nombre": "Pechuga de pollo", "cantidad": 150, "unidad": "gramos"},
+      {"nombre": "Arroz", "cantidad": 80, "unidad": "gramos"}
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 4200,
+    "calorias": 520,
+    "proteinas": 42,
+    "carbohidratos": 62,
+    "grasas": 10,
+    "preparacion": "Hervir el arroz, cocinar el pollo y servir."
+  },
+  {
+    "id": 3,
+    "nombre": "Yogur con frutas",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {"nombre": "Yogur natural", "cantidad": 200, "unidad": "gramos"},
+      {"nombre": "Banana", "cantidad": 1, "unidad": "unidad"}
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1600,
+    "calorias": 230,
+    "proteinas": 11,
+    "carbohidratos": 35,
+    "grasas": 5,
+    "preparacion": "Colocar el yogur en un recipiente y agregar la banana cortada."
+  },
+  {
+    "id": 4,
+    "nombre": "Tortilla de verduras",
+    "tipo": "Cena",
+    "ingredientes": [
+      {"nombre": "Huevo", "cantidad": 2, "unidad": "unidades"},
+      {"nombre": "Zanahoria", "cantidad": 100, "unidad": "gramos"},
+      {"nombre": "Zapallito", "cantidad": 100, "unidad": "gramos"}
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 2500,
+    "calorias": 280,
+    "proteinas": 16,
+    "carbohidratos": 15,
+    "grasas": 17,
+    "preparacion": "Cortar las verduras, mezclarlas con los huevos y cocinar en una sarten."
+  }
+]

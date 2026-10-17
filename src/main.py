@@ -1,9 +1,26 @@
+import json
+from pathlib import Path
+
+
+def cargar_recetas():
+    ruta = Path(__file__).resolve().parent.parent / "data" / "recetas.json"
+
+    with open(ruta, "r", encoding="utf-8") as archivo:
+        recetas = json.load(archivo)
+
+    return recetas
+
+
 def main():
     print("======================================")
     print(" PLANIFICADOR DE ALIMENTACION SEMANAL")
     print("======================================")
 
     print("Bienvenido al planificador de comidas.")
+
+    recetas = cargar_recetas()
+
+    print(f"Recetas disponibles: {len(recetas)}")
 
     cantidad_personas = int(
         input("¿Para cuantas personas queres planificar? ")
