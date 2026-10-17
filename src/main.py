@@ -9,7 +9,7 @@ def cargar_recetas():
         recetas = json.load(archivo)
 
     return recetas
-def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, tiempo_maximo):
+def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, tiempo_maximo, metas_nutricionales):
     dias = [
         "Lunes", "Martes", "Miercoles",
         "Jueves", "Viernes", "Sabado", "Domingo"
@@ -19,6 +19,12 @@ def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, 
 
     for dia in dias:
         menu[dia] = {}
+        nutrientes_acumulados = {
+            "calorias": 0,
+            "proteinas": 0,
+            "carbohidratos": 0,
+            "grasas": 0
+        }
         print(f"\n===== {dia.upper()} =====")
 
         for comida in comidas_seleccionadas:
@@ -32,6 +38,21 @@ def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, 
                     for excluido in ingredientes_excluidos
                 )
             ]
+            if metas_nutricionales:
+                def calcular_distancia(receta):
+                    distancia = 0
+
+                    for nutriente, meta in metas_nutricionales.items():
+                        total_estimado = (
+                            nutrientes_acumulados[nutriente]
+                            + receta[nutriente]
+                        )
+
+                        distancia += abs(meta - total_estimado) / meta
+
+                    return distancia
+
+                recetas_disponibles.sort(key=calcular_distancia)
             if not recetas_disponibles:
                 print(f"No hay recetas disponibles para {comida}.")
                 continue
@@ -39,8 +60,9 @@ def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, 
             print(f"\nElegí tu {comida.lower()}:")
 
             for numero, receta in enumerate(recetas_disponibles, start=1):
+                recomendacion = " [RECOMENDADA]" if metas_nutricionales and numero == 1 else ""
                 print(
-                    f"{numero}. {receta['nombre']} | "
+                    f"{numero}. {receta['nombre']}{recomendacion} | "
                     f"Tiempo: {receta['tiempo_minutos']} min | "
                     f"Costo: ${receta['costo_estimado']} | "
                     f"Calorias: {receta['calorias']} kcal | "
@@ -55,6 +77,8 @@ def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, 
                     if 0 <= indice < len(recetas_disponibles):
                         receta_elegida = recetas_disponibles[indice]
                         menu[dia][comida] = receta_elegida
+                        for nutriente in nutrientes_acumulados:
+                            nutrientes_acumulados[nutriente] += receta_elegida[nutriente]
                         break
 
                 print("Opcion invalida. Intenta nuevamente.")
@@ -177,10 +201,54 @@ def calcular_nutricion_diaria(menu_semanal):
                 totales[nutriente] += receta[nutriente]
 
         resultados[dia] = totales
-
     return resultados
-
 def main():
+    print("\n===== OBJETIVO NUTRICIONAL =====")
+
+    while True:
+        print("¿Queres establecer un objetivo nutricional?")
+        print("1. Si")
+        print("2. No")
+
+        opcion_objetivo = input("Elegi una opcion: ").strip()
+
+        if opcion_objetivo in ("1", "2"):
+            break
+
+        print("Opcion invalida. Ingresa 1 o 2.")
+
+    metas_nutricionales = {}
+
+    if opcion_objetivo == "1":
+        print("\n===== TUS METAS NUTRICIONALES DIARIAS =====")
+
+        nutrientes = {
+            "calorias": "Calorias (kcal)",
+            "proteinas": "Proteinas (g)",
+            "carbohidratos": "Carbohidratos (g)",
+            "grasas": "Grasas (g)"
+        }
+
+        for nutriente, descripcion in nutrientes.items():
+            while True:
+                entrada = input(
+                    f"Objetivo diario de {descripcion} (Enter para omitir): "
+                ).strip()
+
+                if entrada == "":
+                    break
+
+                try:
+                    valor = float(entrada.replace(",", "."))
+
+                    if valor > 0:
+                        metas_nutricionales[nutriente] = valor
+                        break
+
+                except ValueError:
+                    pass
+
+                print("Ingresa un numero mayor que cero o presiona Enter.")
     print("======================================")
     print(" PLANIFICADOR DE ALIMENTACION SEMANAL")
     print("======================================")
@@ -273,7 +341,7 @@ def main():
 
         print("Error: ingresa un numero entero mayor que cero.")
     menu_semanal = generar_menu_semanal(
-        recetas, comidas_seleccionadas, ingredientes_excluidos, tiempo_maximo
+        recetas, comidas_seleccionadas, ingredientes_excluidos, tiempo_maximo, metas_nutricionales
     )
 
     print("\n¿Queres modificar alguna receta del menu?")
@@ -338,6 +406,30 @@ def main():
         print(f"Proteinas: {total['proteinas']:,.1f} g")
         print(f"Carbohidratos: {total['carbohidratos']:,.1f} g")
         print(f"Grasas: {total['grasas']:,.1f} g")
+        if metas_nutricionales:
+            print(f"\n===== OBJETIVOS NUTRICIONALES DEL {dia.upper()} =====")
 
+            nombres = {
+                "calorias": "Calorias",
+                "proteinas": "Proteinas",
+                "carbohidratos": "Carbohidratos",
+                "grasas": "Grasas"
+            }
+
+            for nutriente, meta in metas_nutricionales.items():
+                consumido = total[nutriente]
+                diferencia = meta - consumido
+                unidad = "kcal" if nutriente == "calorias" else "g"
+
+                print(f"\n{nombres[nutriente]}:")
+                print(f"Total del menu: {consumido:.1f} {unidad}")
+                print(f"Objetivo diario: {meta:.1f} {unidad}")
+
+                if abs(diferencia) < 0.01:
+                    print("Objetivo alcanzado.")
+                elif diferencia > 0:
+                    print(f"Faltan {diferencia:.1f} {unidad} para alcanzar el objetivo.")
+                else:
+                    print(f"Superaste el objetivo por {abs(diferencia):.1f} {unidad}.")
 if __name__ == "__main__":
     main()
