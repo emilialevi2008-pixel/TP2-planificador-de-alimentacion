@@ -61,6 +61,26 @@ def calcular_costo_semanal(menu_semanal, cantidad_personas):
             costo_total += receta["costo_estimado"] * cantidad_personas
 
     return costo_total
+def generar_lista_compras(menu_semanal, cantidad_personas):
+    lista_compras = {}
+
+    for dia, comidas in menu_semanal.items():
+        for tipo, receta in comidas.items():
+            for ingrediente in receta["ingredientes"]:
+                nombre = ingrediente["nombre"].strip().lower()
+                unidad = ingrediente["unidad"]
+                cantidad = ingrediente["cantidad"] * cantidad_personas
+
+                clave = (nombre, unidad)
+
+                if clave in lista_compras:
+                    lista_compras[clave] += cantidad
+                else:
+                    lista_compras[clave] = cantidad
+
+    return lista_compras
+
+
 def main():
     print("======================================")
     print(" PLANIFICADOR DE ALIMENTACION SEMANAL")
@@ -142,5 +162,15 @@ def main():
         print(f"Dinero restante: ${diferencia:,.2f}")
     else:
         print(f"Presupuesto excedido por: ${abs(diferencia):,.2f}")
+
+    lista_compras = generar_lista_compras(
+        menu_semanal, cantidad_personas
+    )
+
+    print("\n===== LISTA DE COMPRAS SEMANAL =====")
+
+    for (nombre, unidad), cantidad in sorted(lista_compras.items()):
+        print(f"- {nombre}: {cantidad:g} {unidad}")
+
 if __name__ == "__main__":
     main()
