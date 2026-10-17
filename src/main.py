@@ -39,8 +39,13 @@ def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, 
             print(f"\nElegí tu {comida.lower()}:")
 
             for numero, receta in enumerate(recetas_disponibles, start=1):
-                print(f"{numero}. {receta['nombre']}")
-
+                print(
+                    f"{numero}. {receta['nombre']} | "
+                    f"Tiempo: {receta['tiempo_minutos']} min | "
+                    f"Costo: ${receta['costo_estimado']} | "
+                    f"Calorias: {receta['calorias']} kcal | "
+                    f"Proteinas: {receta['proteinas']} g"
+                )
             while True:
                 opcion = input("Ingresa el numero de la receta: ")
 
