@@ -9,7 +9,7 @@ def cargar_recetas():
         recetas = json.load(archivo)
 
     return recetas
-def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos):
+def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, tiempo_maximo):
     dias = [
         "Lunes", "Martes", "Miercoles",
         "Jueves", "Viernes", "Sabado", "Domingo"
@@ -25,6 +25,7 @@ def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos):
             recetas_disponibles = [
                 receta for receta in recetas
                 if receta["tipo"] == comida
+                and receta["tiempo_minutos"] <= tiempo_maximo
                 and not any(
                     excluido.lower() in ingrediente["nombre"].lower()
                     for ingrediente in receta["ingredientes"]
@@ -171,8 +172,14 @@ def main():
         for ingrediente in respuesta.split(",")
         if ingrediente.strip()
     ]
+    print("\nTIEMPO MAXIMO DE PREPARACION")
+
+    tiempo_maximo = int(
+        input("¿Cuantos minutos como maximo queres cocinar por comida? ")
+    )
+
     menu_semanal = generar_menu_semanal(
-        recetas, comidas_seleccionadas, ingredientes_excluidos
+        recetas, comidas_seleccionadas, ingredientes_excluidos, tiempo_maximo
     )
     print("\nMENU SEMANAL GENERADO")
 
