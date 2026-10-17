@@ -32,7 +32,6 @@ def main():
 
     for opcion in opciones.split(","):
         opcion = opcion.strip()
-
         if opcion in tipos_comida:
             comida = tipos_comida[opcion]
 
@@ -44,6 +43,13 @@ def main():
     for comida in comidas_seleccionadas:
         print(f"- {comida}")
 
+    print("\nPRESUPUESTO SEMANAL")
+
+    presupuesto = float(
+        input("¿Cuanto dinero queres gastar por semana en pesos? ")
+    )
+
+    print(f"Tu presupuesto semanal es de ${presupuesto:,.2f}")
 
 if __name__ == "__main__":
     main()
