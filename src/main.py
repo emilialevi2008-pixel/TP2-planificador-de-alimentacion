@@ -44,7 +44,7 @@ def generar_menu_semanal(recetas, comidas_seleccionadas):
 
                     if 0 <= indice < len(recetas_disponibles):
                         receta_elegida = recetas_disponibles[indice]
-                        menu[dia][comida] = receta_elegida["nombre"]
+                        menu[dia][comida] = receta_elegida
                         break
 
                 print("Opcion invalida. Intenta nuevamente.")
@@ -53,7 +53,14 @@ def generar_menu_semanal(recetas, comidas_seleccionadas):
 
 
 
+def calcular_costo_semanal(menu_semanal, cantidad_personas):
+    costo_total = 0
 
+    for dia, comidas in menu_semanal.items():
+        for tipo, receta in comidas.items():
+            costo_total += receta["costo_estimado"] * cantidad_personas
+
+    return costo_total
 def main():
     print("======================================")
     print(" PLANIFICADOR DE ALIMENTACION SEMANAL")
@@ -119,6 +126,21 @@ def main():
         print(f"\n{dia}:")
 
         for tipo, receta in comidas.items():
-            print(f"  {tipo}: {receta}")
+            print(f"  {tipo}: {receta['nombre']}")
+
+    costo_total = calcular_costo_semanal(
+        menu_semanal, cantidad_personas
+    )
+
+    print("\nRESUMEN DEL PRESUPUESTO")
+    print(f"Costo total estimado: ${costo_total:,.2f}")
+    print(f"Presupuesto disponible: ${presupuesto:,.2f}")
+
+    diferencia = presupuesto - costo_total
+
+    if diferencia >= 0:
+        print(f"Dinero restante: ${diferencia:,.2f}")
+    else:
+        print(f"Presupuesto excedido por: ${abs(diferencia):,.2f}")
 if __name__ == "__main__":
     main()
