@@ -186,10 +186,14 @@ def main():
 
     print(f"Recetas disponibles: {len(recetas)}")
 
-    cantidad_personas = int(
-        input("¿Para cuantas personas queres planificar? ")
-    )
+    while True:
+        entrada = input("¿Para cuantas personas es el menu? ").strip()
 
+        if entrada.isdigit() and int(entrada) > 0:
+            cantidad_personas = int(entrada)
+            break
+
+        print("Error: ingresa un numero entero mayor que cero.")
     print(f"Vamos a planificar comidas para {cantidad_personas} personas.")
 
     print("\nSelecciona las comidas que queres incluir:")
@@ -226,10 +230,19 @@ def main():
 
     print("\nPRESUPUESTO SEMANAL")
 
-    presupuesto = float(
-        input("¿Cuanto dinero queres gastar por semana en pesos? ")
-    )
+    while True:
+        entrada = input("Ingresa tu presupuesto semanal: ").strip()
 
+        try:
+            presupuesto = float(entrada.replace(",", "."))
+
+            if presupuesto >= 0:
+                break
+
+        except ValueError:
+            pass
+
+        print("Error: ingresa un presupuesto valido, mayor o igual a cero.")
     print(f"Tu presupuesto semanal es de ${presupuesto:,.2f}")
 
     print("\nINGREDIENTES EXCLUIDOS")
@@ -246,10 +259,14 @@ def main():
     ]
     print("\nTIEMPO MAXIMO DE PREPARACION")
 
-    tiempo_maximo = int(
-        input("¿Cuantos minutos como maximo queres cocinar por comida? ")
-    )
+    while True:
+        entrada = input("Ingresa el tiempo maximo de preparacion en minutos: ").strip()
 
+        if entrada.isdigit() and int(entrada) > 0:
+            tiempo_maximo = int(entrada)
+            break
+
+        print("Error: ingresa un numero entero mayor que cero.")
     menu_semanal = generar_menu_semanal(
         recetas, comidas_seleccionadas, ingredientes_excluidos, tiempo_maximo
     )
