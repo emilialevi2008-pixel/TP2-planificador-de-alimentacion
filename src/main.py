@@ -55,7 +55,79 @@ def generar_menu_semanal(recetas, comidas_seleccionadas,ingredientes_excluidos, 
                 print("Opcion invalida. Intenta nuevamente.")
 
     return menu
+def modificar_menu(menu_semanal, recetas, ingredientes_excluidos, tiempo_maximo):
+    while True:
+        print("\n===== MODIFICAR MENU =====")
+        print("Dias disponibles:")
 
+        dias = list(menu_semanal.keys())
+
+        for numero, dia in enumerate(dias, start=1):
+            print(f"{numero}. {dia}")
+
+        print("0. Finalizar modificaciones")
+
+        opcion_dia = input("Elegi un dia: ").strip()
+
+        if opcion_dia == "0":
+            break
+
+        if not opcion_dia.isdigit() or not 1 <= int(opcion_dia) <= len(dias):
+            print("Dia invalido.")
+            continue
+
+        dia = dias[int(opcion_dia) - 1]
+        comidas = list(menu_semanal[dia].keys())
+
+        if not comidas:
+            print("No hay comidas para modificar ese dia.")
+            continue
+
+        print(f"\nComidas del {dia}:")
+
+        for numero, comida in enumerate(comidas, start=1):
+            print(f"{numero}. {comida}")
+
+        opcion_comida = input("Elegi una comida: ").strip()
+
+        if not opcion_comida.isdigit() or not 1 <= int(opcion_comida) <= len(comidas):
+            print("Comida invalida.")
+            continue
+
+        comida = comidas[int(opcion_comida) - 1]
+
+        disponibles = [
+            receta for receta in recetas
+            if receta["tipo"] == comida
+            and receta["tiempo_minutos"] <= tiempo_maximo
+            and not any(
+                excluido in ingrediente["nombre"].lower()
+                for ingrediente in receta["ingredientes"]
+                for excluido in ingredientes_excluidos
+            )
+        ]
+
+        if not disponibles:
+            print("No hay recetas disponibles para esta comida.")
+            continue
+
+        print("\nRecetas disponibles:")
+
+        for numero, receta in enumerate(disponibles, start=1):
+            print(f"{numero}. {receta['nombre']}")
+
+        opcion_receta = input("Elegi la nueva receta: ").strip()
+
+        if not opcion_receta.isdigit() or not 1 <= int(opcion_receta) <= len(disponibles):
+            print("Receta invalida.")
+            continue
+
+        receta_elegida = disponibles[int(opcion_receta) - 1]
+        menu_semanal[dia][comida] = receta_elegida
+
+        print(f"Receta actualizada: {receta_elegida['nombre']}")
+
+    return menu_semanal
 
 
 def calcular_costo_semanal(menu_semanal, cantidad_personas):
@@ -181,6 +253,17 @@ def main():
     menu_semanal = generar_menu_semanal(
         recetas, comidas_seleccionadas, ingredientes_excluidos, tiempo_maximo
     )
+
+    print("\n¿Queres modificar alguna receta del menu?")
+    respuesta_modificar = input("Escribi si o no: ").strip().lower()
+
+    if respuesta_modificar in ("si", "sí", "s"):
+        menu_semanal = modificar_menu(
+            menu_semanal,
+            recetas,
+            ingredientes_excluidos,
+            tiempo_maximo
+        )
     print("\nMENU SEMANAL GENERADO")
 
     for dia, comidas in menu_semanal.items():
