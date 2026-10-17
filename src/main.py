@@ -79,7 +79,24 @@ def generar_lista_compras(menu_semanal, cantidad_personas):
                     lista_compras[clave] = cantidad
 
     return lista_compras
+def calcular_nutricion_diaria(menu_semanal):
+    resultados = {}
 
+    for dia, comidas in menu_semanal.items():
+        totales = {
+            "calorias": 0,
+            "proteinas": 0,
+            "carbohidratos": 0,
+            "grasas": 0
+        }
+
+        for tipo, receta in comidas.items():
+            for nutriente in totales:
+                totales[nutriente] += receta[nutriente]
+
+        resultados[dia] = totales
+
+    return resultados
 
 def main():
     print("======================================")
@@ -171,6 +188,27 @@ def main():
 
     for (nombre, unidad), cantidad in sorted(lista_compras.items()):
         print(f"- {nombre}: {cantidad:g} {unidad}")
+    nutricion_diaria = calcular_nutricion_diaria(menu_semanal)
+
+    print("\n===== INFORMACION NUTRICIONAL POR DIA =====")
+
+    for dia, comidas in menu_semanal.items():
+        print(f"\n========== {dia.upper()} ==========")
+
+        for tipo, receta in comidas.items():
+            print(f"\n{tipo.upper()}: {receta['nombre']}")
+            print(f"Calorias: {receta['calorias']:,.0f} kcal")
+            print(f"Proteinas: {receta['proteinas']:,.1f} g")
+            print(f"Carbohidratos: {receta['carbohidratos']:,.1f} g")
+            print(f"Grasas: {receta['grasas']:,.1f} g")
+
+        total = nutricion_diaria[dia]
+
+        print(f"\nTOTAL DEL {dia.upper()}")
+        print(f"Calorias: {total['calorias']:,.0f} kcal")
+        print(f"Proteinas: {total['proteinas']:,.1f} g")
+        print(f"Carbohidratos: {total['carbohidratos']:,.1f} g")
+        print(f"Grasas: {total['grasas']:,.1f} g")
 
 if __name__ == "__main__":
     main()
