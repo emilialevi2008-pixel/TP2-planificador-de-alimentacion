@@ -9,6 +9,49 @@ def cargar_recetas():
         recetas = json.load(archivo)
 
     return recetas
+def generar_menu_semanal(recetas, comidas_seleccionadas):
+    dias = [
+        "Lunes", "Martes", "Miercoles",
+        "Jueves", "Viernes", "Sabado", "Domingo"
+    ]
+
+    menu = {}
+
+    for dia in dias:
+        menu[dia] = {}
+        print(f"\n===== {dia.upper()} =====")
+
+        for comida in comidas_seleccionadas:
+            recetas_disponibles = [
+                receta for receta in recetas
+                if receta["tipo"] == comida
+            ]
+
+            if not recetas_disponibles:
+                print(f"No hay recetas disponibles para {comida}.")
+                continue
+
+            print(f"\nElegí tu {comida.lower()}:")
+
+            for numero, receta in enumerate(recetas_disponibles, start=1):
+                print(f"{numero}. {receta['nombre']}")
+
+            while True:
+                opcion = input("Ingresa el numero de la receta: ")
+
+                if opcion.isdigit():
+                    indice = int(opcion) - 1
+
+                    if 0 <= indice < len(recetas_disponibles):
+                        receta_elegida = recetas_disponibles[indice]
+                        menu[dia][comida] = receta_elegida["nombre"]
+                        break
+
+                print("Opcion invalida. Intenta nuevamente.")
+
+    return menu
+
+
 
 
 def main():
@@ -68,5 +111,14 @@ def main():
 
     print(f"Tu presupuesto semanal es de ${presupuesto:,.2f}")
 
+    menu_semanal = generar_menu_semanal(recetas, comidas_seleccionadas)
+
+    print("\nMENU SEMANAL GENERADO")
+
+    for dia, comidas in menu_semanal.items():
+        print(f"\n{dia}:")
+
+        for tipo, receta in comidas.items():
+            print(f"  {tipo}: {receta}")
 if __name__ == "__main__":
     main()
