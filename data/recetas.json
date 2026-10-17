@@ -4,64 +4,2404 @@
     "nombre": "Tostadas con huevo",
     "tipo": "Desayuno",
     "ingredientes": [
-      {"nombre": "Pan integral", "cantidad": 2, "unidad": "rebanadas"},
-      {"nombre": "Huevo", "cantidad": 2, "unidad": "unidades"}
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 5,
+        "unidad": "ml"
+      }
     ],
     "tiempo_minutos": 10,
-    "costo_estimado": 1800,
-    "calorias": 320,
+    "costo_estimado": 1350,
+    "calorias": 360,
     "proteinas": 19,
-    "carbohidratos": 28,
-    "grasas": 14,
-    "preparacion": "Tostar el pan, cocinar los huevos y servir."
+    "carbohidratos": 29,
+    "grasas": 18,
+    "preparacion": "Tostar el pan. Cocinar los huevos en sartén y servir."
   },
   {
     "id": 2,
-    "nombre": "Pollo con arroz",
-    "tipo": "Almuerzo",
+    "nombre": "Avena con banana",
+    "tipo": "Desayuno",
     "ingredientes": [
-      {"nombre": "Pechuga de pollo", "cantidad": 150, "unidad": "gramos"},
-      {"nombre": "Arroz", "cantidad": 80, "unidad": "gramos"}
+      {
+        "nombre": "avena",
+        "cantidad": 50,
+        "unidad": "g"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "leche",
+        "cantidad": 200,
+        "unidad": "ml"
+      }
     ],
-    "tiempo_minutos": 35,
-    "costo_estimado": 4200,
-    "calorias": 520,
-    "proteinas": 42,
-    "carbohidratos": 62,
-    "grasas": 10,
-    "preparacion": "Hervir el arroz, cocinar el pollo y servir."
+    "tiempo_minutos": 10,
+    "costo_estimado": 1300,
+    "calorias": 390,
+    "proteinas": 15,
+    "carbohidratos": 63,
+    "grasas": 9,
+    "preparacion": "Calentar la leche con la avena. Agregar la banana en rodajas."
   },
   {
     "id": 3,
-    "nombre": "Yogur con frutas",
-    "tipo": "Merienda",
+    "nombre": "Yogur con granola",
+    "tipo": "Desayuno",
     "ingredientes": [
-      {"nombre": "Yogur natural", "cantidad": 200, "unidad": "gramos"},
-      {"nombre": "Banana", "cantidad": 1, "unidad": "unidad"}
+      {
+        "nombre": "yogur natural",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "granola",
+        "cantidad": 40,
+        "unidad": "g"
+      },
+      {
+        "nombre": "frutillas",
+        "cantidad": 80,
+        "unidad": "g"
+      }
     ],
     "tiempo_minutos": 5,
-    "costo_estimado": 1600,
-    "calorias": 230,
-    "proteinas": 11,
-    "carbohidratos": 35,
-    "grasas": 5,
-    "preparacion": "Colocar el yogur en un recipiente y agregar la banana cortada."
+    "costo_estimado": 2000,
+    "calorias": 340,
+    "proteinas": 13,
+    "carbohidratos": 48,
+    "grasas": 10,
+    "preparacion": "Colocar el yogur en un bol y añadir granola y frutillas."
   },
   {
     "id": 4,
+    "nombre": "Tostadas con palta",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "palta",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "limón",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 10,
+    "costo_estimado": 1500,
+    "calorias": 320,
+    "proteinas": 9,
+    "carbohidratos": 34,
+    "grasas": 18,
+    "preparacion": "Tostar el pan y cubrir con palta pisada y limón."
+  },
+  {
+    "id": 5,
+    "nombre": "Omelette de queso",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 40,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 12,
+    "costo_estimado": 1500,
+    "calorias": 340,
+    "proteinas": 24,
+    "carbohidratos": 5,
+    "grasas": 25,
+    "preparacion": "Batir los huevos, agregar queso y cocinar en sartén. Acompañar con tomate."
+  },
+  {
+    "id": 6,
+    "nombre": "Panqueques de avena",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "avena",
+        "cantidad": 50,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 15,
+    "costo_estimado": 1300,
+    "calorias": 370,
+    "proteinas": 14,
+    "carbohidratos": 55,
+    "grasas": 11,
+    "preparacion": "Procesar los ingredientes y cocinar panqueques pequeños."
+  },
+  {
+    "id": 7,
+    "nombre": "Licuado de frutilla",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "leche",
+        "cantidad": 250,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "frutillas",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "avena",
+        "cantidad": 30,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 2000,
+    "calorias": 280,
+    "proteinas": 13,
+    "carbohidratos": 41,
+    "grasas": 7,
+    "preparacion": "Licuar todo hasta lograr una textura uniforme."
+  },
+  {
+    "id": 8,
+    "nombre": "Tostadas con ricota y miel",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "ricota",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "miel",
+        "cantidad": 15,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 7,
+    "costo_estimado": 1300,
+    "calorias": 330,
+    "proteinas": 17,
+    "carbohidratos": 44,
+    "grasas": 9,
+    "preparacion": "Tostar el pan, untar ricota y terminar con miel."
+  },
+  {
+    "id": 9,
+    "nombre": "Pudin de chia",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "semillas de chía",
+        "cantidad": 25,
+        "unidad": "g"
+      },
+      {
+        "nombre": "leche",
+        "cantidad": 200,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "manzana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 10,
+    "costo_estimado": 1300,
+    "calorias": 290,
+    "proteinas": 11,
+    "carbohidratos": 39,
+    "grasas": 11,
+    "preparacion": "Mezclar chía y leche, refrigerar durante la noche y servir con manzana."
+  },
+  {
+    "id": 10,
+    "nombre": "Sándwich de huevo",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 50,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 12,
+    "costo_estimado": 1450,
+    "calorias": 350,
+    "proteinas": 20,
+    "carbohidratos": 30,
+    "grasas": 16,
+    "preparacion": "Cocinar los huevos y armar el sándwich con tomate."
+  },
+  {
+    "id": 11,
+    "nombre": "Yogur con banana y nueces",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "yogur natural",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "nueces",
+        "cantidad": 20,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 2050,
+    "calorias": 390,
+    "proteinas": 13,
+    "carbohidratos": 40,
+    "grasas": 21,
+    "preparacion": "Mezclar el yogur con banana en rodajas y nueces."
+  },
+  {
+    "id": 12,
+    "nombre": "Tostadas francesas",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "leche",
+        "cantidad": 80,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "canela",
+        "cantidad": 2,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 15,
+    "costo_estimado": 1100,
+    "calorias": 310,
+    "proteinas": 15,
+    "carbohidratos": 32,
+    "grasas": 12,
+    "preparacion": "Remojar el pan en huevo y leche; dorar de ambos lados."
+  },
+  {
+    "id": 13,
+    "nombre": "Revuelto de huevo y espinaca",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "espinaca",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "pan integral",
+        "cantidad": 1,
+        "unidad": "rebanada"
+      }
+    ],
+    "tiempo_minutos": 12,
+    "costo_estimado": 1300,
+    "calorias": 290,
+    "proteinas": 18,
+    "carbohidratos": 16,
+    "grasas": 17,
+    "preparacion": "Saltear la espinaca y añadir los huevos batidos. Servir con pan."
+  },
+  {
+    "id": 14,
+    "nombre": "Avena nocturna con manzana",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "avena",
+        "cantidad": 50,
+        "unidad": "g"
+      },
+      {
+        "nombre": "yogur natural",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "manzana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 8,
+    "costo_estimado": 1450,
+    "calorias": 370,
+    "proteinas": 16,
+    "carbohidratos": 61,
+    "grasas": 7,
+    "preparacion": "Mezclar avena y yogur; refrigerar y agregar manzana al servir."
+  },
+  {
+    "id": 15,
+    "nombre": "Tostadas con queso y tomate",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 50,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 8,
+    "costo_estimado": 1300,
+    "calorias": 300,
+    "proteinas": 17,
+    "carbohidratos": 31,
+    "grasas": 12,
+    "preparacion": "Tostar el pan y cubrir con queso y tomate."
+  },
+  {
+    "id": 16,
+    "nombre": "Licuado de banana y cacao",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "leche",
+        "cantidad": 250,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "cacao amargo",
+        "cantidad": 10,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1450,
+    "calorias": 260,
+    "proteinas": 12,
+    "carbohidratos": 39,
+    "grasas": 7,
+    "preparacion": "Licuar todos los ingredientes y servir frío."
+  },
+  {
+    "id": 17,
+    "nombre": "Muffins de avena y banana",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "avena",
+        "cantidad": 50,
+        "unidad": "g"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 1300,
+    "calorias": 350,
+    "proteinas": 14,
+    "carbohidratos": 53,
+    "grasas": 11,
+    "preparacion": "Mezclar, colocar en moldes y hornear hasta que estén cocidos."
+  },
+  {
+    "id": 18,
+    "nombre": "Yogur con durazno",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "yogur natural",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "durazno",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "avena",
+        "cantidad": 30,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1700,
+    "calorias": 290,
+    "proteinas": 14,
+    "carbohidratos": 43,
+    "grasas": 7,
+    "preparacion": "Cortar el durazno y mezclar con yogur y avena."
+  },
+  {
+    "id": 19,
+    "nombre": "Tortilla de avena",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "avena",
+        "cantidad": 40,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 25,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 15,
+    "costo_estimado": 1200,
+    "calorias": 380,
+    "proteinas": 22,
+    "carbohidratos": 28,
+    "grasas": 19,
+    "preparacion": "Mezclar ingredientes y cocinar en sartén de ambos lados."
+  },
+  {
+    "id": 20,
+    "nombre": "Sándwich de ricota y fruta",
+    "tipo": "Desayuno",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "ricota",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "frutillas",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 8,
+    "costo_estimado": 1800,
+    "calorias": 310,
+    "proteinas": 16,
+    "carbohidratos": 37,
+    "grasas": 9,
+    "preparacion": "Untar ricota sobre el pan y acompañar con frutillas."
+  },
+  {
+    "id": 21,
+    "nombre": "Pollo con arroz",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "arroz",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 2300,
+    "calorias": 560,
+    "proteinas": 41,
+    "carbohidratos": 61,
+    "grasas": 8,
+    "preparacion": "Cocinar el arroz y el pollo a la plancha; servir con zanahoria."
+  },
+  {
+    "id": 22,
+    "nombre": "Ensalada de atún y garbanzos",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "atún al natural",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "garbanzos cocidos",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 15,
+    "costo_estimado": 2800,
+    "calorias": 480,
+    "proteinas": 40,
+    "carbohidratos": 45,
+    "grasas": 8,
+    "preparacion": "Escurrir y mezclar todos los ingredientes."
+  },
+  {
+    "id": 23,
+    "nombre": "Fideos con salsa de tomate",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "fideos secos",
+        "cantidad": 90,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate triturado",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso rallado",
+        "cantidad": 15,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 1050,
+    "calorias": 450,
+    "proteinas": 17,
+    "carbohidratos": 75,
+    "grasas": 10,
+    "preparacion": "Hervir los fideos y servir con salsa caliente y queso."
+  },
+  {
+    "id": 24,
+    "nombre": "Wrap de pollo",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "tortilla de trigo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 130,
+        "unidad": "g"
+      },
+      {
+        "nombre": "lechuga",
+        "cantidad": 50,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 2700,
+    "calorias": 510,
+    "proteinas": 39,
+    "carbohidratos": 37,
+    "grasas": 12,
+    "preparacion": "Cocinar el pollo y armar el wrap con verduras."
+  },
+  {
+    "id": 25,
+    "nombre": "Tarta de espinaca",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "masa para tarta",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "espinaca",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "ricota",
+        "cantidad": 60,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 40,
+    "costo_estimado": 2150,
+    "calorias": 540,
+    "proteinas": 22,
+    "carbohidratos": 43,
+    "grasas": 26,
+    "preparacion": "Rellenar la masa y hornear hasta dorar."
+  },
+  {
+    "id": 26,
+    "nombre": "Ensalada de quinoa",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "quinoa",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "pepino",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 1800,
+    "calorias": 440,
+    "proteinas": 19,
+    "carbohidratos": 54,
+    "grasas": 14,
+    "preparacion": "Cocinar quinoa y huevo; mezclar con verduras."
+  },
+  {
+    "id": 27,
+    "nombre": "Carne con puré de calabaza",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "carne vacuna magra",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "calabaza",
+        "cantidad": 250,
+        "unidad": "g"
+      },
+      {
+        "nombre": "leche",
+        "cantidad": 40,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 3400,
+    "calorias": 590,
+    "proteinas": 37,
+    "carbohidratos": 30,
+    "grasas": 18,
+    "preparacion": "Cocinar la carne a la plancha y preparar puré de calabaza."
+  },
+  {
+    "id": 28,
+    "nombre": "Arroz salteado con verduras",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "arroz",
+        "cantidad": 75,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zucchini",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 1200,
+    "calorias": 420,
+    "proteinas": 16,
+    "carbohidratos": 70,
+    "grasas": 10,
+    "preparacion": "Cocinar arroz y saltear con verduras y huevo."
+  },
+  {
+    "id": 29,
+    "nombre": "Hamburguesa casera con ensalada",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "carne vacuna magra",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "lechuga",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "pan integral",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 3450,
+    "calorias": 570,
+    "proteinas": 38,
+    "carbohidratos": 32,
+    "grasas": 18,
+    "preparacion": "Formar hamburguesa, cocinar y acompañar con ensalada."
+  },
+  {
+    "id": 30,
+    "nombre": "Milanesa de pollo al horno",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "pan rallado",
+        "cantidad": 35,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 2900,
+    "calorias": 580,
+    "proteinas": 46,
+    "carbohidratos": 30,
+    "grasas": 16,
+    "preparacion": "Empanar el pollo y hornear; servir con tomate."
+  },
+  {
+    "id": 31,
+    "nombre": "Lentejas con verduras",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "lentejas cocidas",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate triturado",
+        "cantidad": 100,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 1450,
+    "calorias": 390,
+    "proteinas": 21,
+    "carbohidratos": 63,
+    "grasas": 4,
+    "preparacion": "Rehogar verduras y agregar lentejas y tomate; cocinar."
+  },
+  {
+    "id": 32,
+    "nombre": "Sándwich de pollo y palta",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "palta",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "lechuga",
+        "cantidad": 40,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 20,
+    "costo_estimado": 2900,
+    "calorias": 550,
+    "proteinas": 39,
+    "carbohidratos": 32,
+    "grasas": 18,
+    "preparacion": "Cocinar pollo y armar sándwich con palta y lechuga."
+  },
+  {
+    "id": 33,
+    "nombre": "Tortilla de papa y cebolla",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "papa",
+        "cantidad": 220,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 1850,
+    "calorias": 450,
+    "proteinas": 17,
+    "carbohidratos": 45,
+    "grasas": 20,
+    "preparacion": "Cocinar papa y cebolla, agregar huevo y cuajar la tortilla."
+  },
+  {
+    "id": 34,
+    "nombre": "Ensalada de arroz y atún",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "arroz",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "atún al natural",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "choclo",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 2750,
+    "calorias": 500,
+    "proteinas": 36,
+    "carbohidratos": 72,
+    "grasas": 4,
+    "preparacion": "Cocinar arroz, enfriar y mezclar con los demás ingredientes."
+  },
+  {
+    "id": 35,
+    "nombre": "Pollo con batata al horno",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "batata",
+        "cantidad": 220,
+        "unidad": "g"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 40,
+    "costo_estimado": 3000,
+    "calorias": 540,
+    "proteinas": 39,
+    "carbohidratos": 45,
+    "grasas": 13,
+    "preparacion": "Hornear la batata y cocinar el pollo hasta que esté hecho."
+  },
+  {
+    "id": 36,
+    "nombre": "Wok de carne y vegetales",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "carne vacuna magra",
+        "cantidad": 140,
+        "unidad": "g"
+      },
+      {
+        "nombre": "morrón",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zucchini",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "arroz",
+        "cantidad": 60,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 3650,
+    "calorias": 610,
+    "proteinas": 38,
+    "carbohidratos": 58,
+    "grasas": 13,
+    "preparacion": "Saltear carne y vegetales; servir sobre arroz cocido."
+  },
+  {
+    "id": 37,
+    "nombre": "Pasta con brócoli",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "fideos secos",
+        "cantidad": 85,
+        "unidad": "g"
+      },
+      {
+        "nombre": "brócoli",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso rallado",
+        "cantidad": 20,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 1400,
+    "calorias": 430,
+    "proteinas": 19,
+    "carbohidratos": 73,
+    "grasas": 10,
+    "preparacion": "Hervir pasta y brócoli; mezclar y agregar queso."
+  },
+  {
+    "id": 38,
+    "nombre": "Bowl de garbanzos y huevo",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "garbanzos cocidos",
+        "cantidad": 170,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "espinaca",
+        "cantidad": 60,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 20,
+    "costo_estimado": 1800,
+    "calorias": 470,
+    "proteinas": 26,
+    "carbohidratos": 48,
+    "grasas": 16,
+    "preparacion": "Cocinar huevos y combinar con garbanzos y espinaca."
+  },
+  {
+    "id": 39,
+    "nombre": "Pollo con couscous",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 140,
+        "unidad": "g"
+      },
+      {
+        "nombre": "couscous",
+        "cantidad": 75,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 2750,
+    "calorias": 530,
+    "proteinas": 43,
+    "carbohidratos": 61,
+    "grasas": 6,
+    "preparacion": "Hidratar couscous y cocinar pollo; servir con tomate."
+  },
+  {
+    "id": 40,
+    "nombre": "Empanadas de carne al horno",
+    "tipo": "Almuerzo",
+    "ingredientes": [
+      {
+        "nombre": "tapas para empanadas",
+        "cantidad": 3,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "carne vacuna magra",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 40,
+    "costo_estimado": 3300,
+    "calorias": 630,
+    "proteinas": 35,
+    "carbohidratos": 52,
+    "grasas": 27,
+    "preparacion": "Preparar relleno, armar tres empanadas y hornear."
+  },
+  {
+    "id": 41,
+    "nombre": "Yogur con frutas",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "yogur natural",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "frutillas",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 2150,
+    "calorias": 240,
+    "proteinas": 11,
+    "carbohidratos": 39,
+    "grasas": 4,
+    "preparacion": "Servir yogur con frutas cortadas."
+  },
+  {
+    "id": 42,
+    "nombre": "Tostadas con queso untable",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "queso untable",
+        "cantidad": 40,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 850,
+    "calorias": 260,
+    "proteinas": 10,
+    "carbohidratos": 31,
+    "grasas": 10,
+    "preparacion": "Tostar el pan y untar queso."
+  },
+  {
+    "id": 43,
+    "nombre": "Licuado de banana",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "leche",
+        "cantidad": 250,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1150,
+    "calorias": 220,
+    "proteinas": 10,
+    "carbohidratos": 37,
+    "grasas": 5,
+    "preparacion": "Licuar leche y banana."
+  },
+  {
+    "id": 44,
+    "nombre": "Manzana con mantequilla de maní",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "manzana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "mantequilla de maní",
+        "cantidad": 25,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 950,
+    "calorias": 240,
+    "proteinas": 7,
+    "carbohidratos": 30,
+    "grasas": 13,
+    "preparacion": "Cortar manzana y acompañar con mantequilla de maní."
+  },
+  {
+    "id": 45,
+    "nombre": "Yogur con avena",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "yogur natural",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "avena",
+        "cantidad": 40,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1000,
+    "calorias": 270,
+    "proteinas": 15,
+    "carbohidratos": 38,
+    "grasas": 7,
+    "preparacion": "Mezclar yogur y avena."
+  },
+  {
+    "id": 46,
+    "nombre": "Sándwich de queso",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 50,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 8,
+    "costo_estimado": 900,
+    "calorias": 320,
+    "proteinas": 18,
+    "carbohidratos": 30,
+    "grasas": 14,
+    "preparacion": "Armar el sándwich y calentar si se desea."
+  },
+  {
+    "id": 47,
+    "nombre": "Panqueques de banana",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "avena",
+        "cantidad": 35,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 15,
+    "costo_estimado": 1200,
+    "calorias": 300,
+    "proteinas": 12,
+    "carbohidratos": 44,
+    "grasas": 9,
+    "preparacion": "Mezclar y cocinar pequeños panqueques."
+  },
+  {
+    "id": 48,
+    "nombre": "Fruta con nueces",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "pera",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "nueces",
+        "cantidad": 25,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1450,
+    "calorias": 260,
+    "proteinas": 5,
+    "carbohidratos": 29,
+    "grasas": 16,
+    "preparacion": "Lavar la fruta y servir con nueces."
+  },
+  {
+    "id": 49,
+    "nombre": "Tostadas con mermelada",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "mermelada",
+        "cantidad": 30,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 700,
+    "calorias": 250,
+    "proteinas": 7,
+    "carbohidratos": 49,
+    "grasas": 3,
+    "preparacion": "Tostar pan y untar mermelada."
+  },
+  {
+    "id": 50,
+    "nombre": "Yogur con semillas",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "yogur natural",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "semillas de chía",
+        "cantidad": 20,
+        "unidad": "g"
+      },
+      {
+        "nombre": "miel",
+        "cantidad": 10,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1200,
+    "calorias": 260,
+    "proteinas": 12,
+    "carbohidratos": 25,
+    "grasas": 12,
+    "preparacion": "Mezclar todos los ingredientes."
+  },
+  {
+    "id": 51,
+    "nombre": "Licuado de frutilla y banana",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "leche",
+        "cantidad": 200,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "frutillas",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1950,
+    "calorias": 230,
+    "proteinas": 9,
+    "carbohidratos": 41,
+    "grasas": 4,
+    "preparacion": "Licuar y servir frío."
+  },
+  {
+    "id": 52,
+    "nombre": "Galletas de avena caseras",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "avena",
+        "cantidad": 50,
+        "unidad": "g"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "canela",
+        "cantidad": 2,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 1000,
+    "calorias": 280,
+    "proteinas": 7,
+    "carbohidratos": 55,
+    "grasas": 4,
+    "preparacion": "Mezclar, formar galletas y hornear."
+  },
+  {
+    "id": 53,
+    "nombre": "Tostadas con ricota",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "ricota",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 6,
+    "costo_estimado": 1100,
+    "calorias": 290,
+    "proteinas": 16,
+    "carbohidratos": 30,
+    "grasas": 10,
+    "preparacion": "Tostar pan y untar ricota."
+  },
+  {
+    "id": 54,
+    "nombre": "Ensalada de frutas",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "manzana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "naranja",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 10,
+    "costo_estimado": 1850,
+    "calorias": 230,
+    "proteinas": 3,
+    "carbohidratos": 58,
+    "grasas": 1,
+    "preparacion": "Pelar y cortar frutas; mezclar."
+  },
+  {
+    "id": 55,
+    "nombre": "Omelette dulce de banana",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "banana",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "canela",
+        "cantidad": 2,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 12,
+    "costo_estimado": 1550,
+    "calorias": 260,
+    "proteinas": 14,
+    "carbohidratos": 27,
+    "grasas": 11,
+    "preparacion": "Batir huevos, añadir banana y cocinar en sartén."
+  },
+  {
+    "id": 56,
+    "nombre": "Pudin de yogur y chia",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "yogur natural",
+        "cantidad": 180,
+        "unidad": "g"
+      },
+      {
+        "nombre": "semillas de chía",
+        "cantidad": 25,
+        "unidad": "g"
+      },
+      {
+        "nombre": "frutillas",
+        "cantidad": 70,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 10,
+    "costo_estimado": 1650,
+    "calorias": 270,
+    "proteinas": 13,
+    "carbohidratos": 25,
+    "grasas": 12,
+    "preparacion": "Mezclar, refrigerar y servir con frutillas."
+  },
+  {
+    "id": 57,
+    "nombre": "Sándwich de jamón y queso",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "jamón cocido",
+        "cantidad": 40,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 40,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1350,
+    "calorias": 330,
+    "proteinas": 22,
+    "carbohidratos": 30,
+    "grasas": 13,
+    "preparacion": "Armar el sándwich y servir."
+  },
+  {
+    "id": 58,
+    "nombre": "Batido de cacao y avena",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "leche",
+        "cantidad": 250,
+        "unidad": "ml"
+      },
+      {
+        "nombre": "avena",
+        "cantidad": 35,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cacao amargo",
+        "cantidad": 10,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1000,
+    "calorias": 280,
+    "proteinas": 13,
+    "carbohidratos": 37,
+    "grasas": 9,
+    "preparacion": "Licuar ingredientes."
+  },
+  {
+    "id": 59,
+    "nombre": "Tostadas con palta y limón",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "pan integral",
+        "cantidad": 2,
+        "unidad": "rebanadas"
+      },
+      {
+        "nombre": "palta",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "limón",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 8,
+    "costo_estimado": 1400,
+    "calorias": 290,
+    "proteinas": 8,
+    "carbohidratos": 33,
+    "grasas": 15,
+    "preparacion": "Tostar pan y untar palta con limón."
+  },
+  {
+    "id": 60,
+    "nombre": "Ricota con miel y fruta",
+    "tipo": "Merienda",
+    "ingredientes": [
+      {
+        "nombre": "ricota",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "miel",
+        "cantidad": 15,
+        "unidad": "g"
+      },
+      {
+        "nombre": "durazno",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 5,
+    "costo_estimado": 1750,
+    "calorias": 280,
+    "proteinas": 14,
+    "carbohidratos": 33,
+    "grasas": 10,
+    "preparacion": "Servir ricota con miel y durazno cortado."
+  },
+  {
+    "id": 61,
     "nombre": "Tortilla de verduras",
     "tipo": "Cena",
     "ingredientes": [
-      {"nombre": "Huevo", "cantidad": 2, "unidad": "unidades"},
-      {"nombre": "Zanahoria", "cantidad": 100, "unidad": "gramos"},
-      {"nombre": "Zapallito", "cantidad": 100, "unidad": "gramos"}
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "zucchini",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 60,
+        "unidad": "g"
+      }
     ],
     "tiempo_minutos": 25,
-    "costo_estimado": 2500,
-    "calorias": 280,
-    "proteinas": 16,
+    "costo_estimado": 1500,
+    "calorias": 310,
+    "proteinas": 17,
+    "carbohidratos": 18,
+    "grasas": 18,
+    "preparacion": "Saltear verduras, agregar huevo y cocinar la tortilla."
+  },
+  {
+    "id": 62,
+    "nombre": "Pescado al horno con papas",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "filet de merluza",
+        "cantidad": 170,
+        "unidad": "g"
+      },
+      {
+        "nombre": "papa",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 2800,
+    "calorias": 470,
+    "proteinas": 35,
+    "carbohidratos": 39,
+    "grasas": 13,
+    "preparacion": "Hornear pescado y papas hasta que estén cocidos."
+  },
+  {
+    "id": 63,
+    "nombre": "Sopa de calabaza con huevo",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "calabaza",
+        "cantidad": 300,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 1900,
+    "calorias": 300,
+    "proteinas": 17,
+    "carbohidratos": 29,
+    "grasas": 11,
+    "preparacion": "Hervir y procesar verduras; acompañar con huevos cocidos."
+  },
+  {
+    "id": 64,
+    "nombre": "Ensalada de pollo",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "lechuga",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 20,
+    "costo_estimado": 2900,
+    "calorias": 370,
+    "proteinas": 39,
+    "carbohidratos": 19,
+    "grasas": 12,
+    "preparacion": "Cocinar el pollo y mezclar con verduras."
+  },
+  {
+    "id": 65,
+    "nombre": "Omelette de espinaca y queso",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "espinaca",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 40,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 18,
+    "costo_estimado": 1650,
+    "calorias": 350,
+    "proteinas": 24,
+    "carbohidratos": 7,
+    "grasas": 25,
+    "preparacion": "Saltear espinaca y cocinar con huevo y queso."
+  },
+  {
+    "id": 66,
+    "nombre": "Zapallitos rellenos",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "zucchini",
+        "cantidad": 250,
+        "unidad": "g"
+      },
+      {
+        "nombre": "carne vacuna magra",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso rallado",
+        "cantidad": 15,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 40,
+    "costo_estimado": 3450,
+    "calorias": 430,
+    "proteinas": 35,
+    "carbohidratos": 16,
+    "grasas": 23,
+    "preparacion": "Ahuecar zapallitos, rellenar con carne cocida y hornear."
+  },
+  {
+    "id": 67,
+    "nombre": "Ensalada tibia de lentejas",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "lentejas cocidas",
+        "cantidad": 180,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 1450,
+    "calorias": 390,
+    "proteinas": 22,
+    "carbohidratos": 47,
+    "grasas": 9,
+    "preparacion": "Saltear verduras y mezclar con lentejas y huevo cocido."
+  },
+  {
+    "id": 68,
+    "nombre": "Pollo salteado con verduras",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "brócoli",
+        "cantidad": 130,
+        "unidad": "g"
+      },
+      {
+        "nombre": "morrón",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 3500,
+    "calorias": 430,
+    "proteinas": 42,
+    "carbohidratos": 16,
+    "grasas": 15,
+    "preparacion": "Saltear pollo y vegetales hasta cocer."
+  },
+  {
+    "id": 69,
+    "nombre": "Tarta de zapallitos",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "masa para tarta",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zucchini",
+        "cantidad": 180,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 1,
+        "unidad": "unidad"
+      },
+      {
+        "nombre": "ricota",
+        "cantidad": 60,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 40,
+    "costo_estimado": 2100,
+    "calorias": 500,
+    "proteinas": 20,
+    "carbohidratos": 43,
+    "grasas": 24,
+    "preparacion": "Rellenar masa con verduras y ricota; hornear."
+  },
+  {
+    "id": 70,
+    "nombre": "Hamburguesas de lentejas",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "lentejas cocidas",
+        "cantidad": 200,
+        "unidad": "g"
+      },
+      {
+        "nombre": "avena",
+        "cantidad": 35,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 60,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 1150,
+    "calorias": 390,
+    "proteinas": 20,
+    "carbohidratos": 63,
+    "grasas": 6,
+    "preparacion": "Pisar lentejas, mezclar, formar hamburguesas y dorar."
+  },
+  {
+    "id": 71,
+    "nombre": "Revuelto de zapallitos",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "zucchini",
+        "cantidad": 180,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 30,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 20,
+    "costo_estimado": 2000,
+    "calorias": 330,
+    "proteinas": 21,
     "carbohidratos": 15,
+    "grasas": 20,
+    "preparacion": "Saltear verduras y revolver con huevos y queso."
+  },
+  {
+    "id": 72,
+    "nombre": "Ensalada de atún y huevo",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "atún al natural",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "lechuga",
+        "cantidad": 70,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 15,
+    "costo_estimado": 3300,
+    "calorias": 350,
+    "proteinas": 43,
+    "carbohidratos": 9,
+    "grasas": 14,
+    "preparacion": "Cocinar huevos y mezclar con atún y vegetales."
+  },
+  {
+    "id": 73,
+    "nombre": "Crema de zanahoria y pollo",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "zanahoria",
+        "cantidad": 250,
+        "unidad": "g"
+      },
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "cebolla",
+        "cantidad": 60,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 2250,
+    "calorias": 350,
+    "proteinas": 35,
+    "carbohidratos": 28,
+    "grasas": 5,
+    "preparacion": "Hervir verduras y procesar; servir con pollo cocido."
+  },
+  {
+    "id": 74,
+    "nombre": "Pizza casera de verduras",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "masa para pizza",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate triturado",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 60,
+        "unidad": "g"
+      },
+      {
+        "nombre": "morrón",
+        "cantidad": 80,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 1950,
+    "calorias": 510,
+    "proteinas": 20,
+    "carbohidratos": 61,
+    "grasas": 19,
+    "preparacion": "Cubrir la masa y hornear hasta dorar."
+  },
+  {
+    "id": 75,
+    "nombre": "Salteado de tofu y verduras",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "tofu firme",
+        "cantidad": 180,
+        "unidad": "g"
+      },
+      {
+        "nombre": "brócoli",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 80,
+        "unidad": "g"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 3100,
+    "calorias": 350,
+    "proteinas": 24,
+    "carbohidratos": 19,
+    "grasas": 21,
+    "preparacion": "Dorar tofu y saltear con verduras."
+  },
+  {
+    "id": 76,
+    "nombre": "Pollo con puré de coliflor",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "pechuga de pollo",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "coliflor",
+        "cantidad": 250,
+        "unidad": "g"
+      },
+      {
+        "nombre": "leche",
+        "cantidad": 40,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 3300,
+    "calorias": 370,
+    "proteinas": 44,
+    "carbohidratos": 17,
+    "grasas": 9,
+    "preparacion": "Cocinar pollo; hervir y procesar coliflor con leche."
+  },
+  {
+    "id": 77,
+    "nombre": "Berenjenas gratinadas",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "berenjena",
+        "cantidad": 250,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate triturado",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 70,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 35,
+    "costo_estimado": 2000,
+    "calorias": 320,
+    "proteinas": 19,
+    "carbohidratos": 23,
     "grasas": 17,
-    "preparacion": "Cortar las verduras, mezclarlas con los huevos y cocinar en una sarten."
+    "preparacion": "Hornear berenjena con tomate y queso hasta gratinar."
+  },
+  {
+    "id": 78,
+    "nombre": "Ensalada de garbanzos",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "garbanzos cocidos",
+        "cantidad": 180,
+        "unidad": "g"
+      },
+      {
+        "nombre": "pepino",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "tomate",
+        "cantidad": 100,
+        "unidad": "g"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 15,
+    "costo_estimado": 1700,
+    "calorias": 420,
+    "proteinas": 17,
+    "carbohidratos": 56,
+    "grasas": 14,
+    "preparacion": "Mezclar garbanzos y verduras con aceite."
+  },
+  {
+    "id": 79,
+    "nombre": "Frittata de brócoli",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "huevo",
+        "cantidad": 2,
+        "unidad": "unidades"
+      },
+      {
+        "nombre": "brócoli",
+        "cantidad": 150,
+        "unidad": "g"
+      },
+      {
+        "nombre": "queso fresco",
+        "cantidad": 40,
+        "unidad": "g"
+      }
+    ],
+    "tiempo_minutos": 25,
+    "costo_estimado": 1900,
+    "calorias": 360,
+    "proteinas": 24,
+    "carbohidratos": 12,
+    "grasas": 23,
+    "preparacion": "Cocinar brócoli y agregar a huevos; cuajar en sartén."
+  },
+  {
+    "id": 80,
+    "nombre": "Merluza con verduras al vapor",
+    "tipo": "Cena",
+    "ingredientes": [
+      {
+        "nombre": "filet de merluza",
+        "cantidad": 180,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zanahoria",
+        "cantidad": 120,
+        "unidad": "g"
+      },
+      {
+        "nombre": "zucchini",
+        "cantidad": 130,
+        "unidad": "g"
+      },
+      {
+        "nombre": "aceite de oliva",
+        "cantidad": 10,
+        "unidad": "ml"
+      }
+    ],
+    "tiempo_minutos": 30,
+    "costo_estimado": 3100,
+    "calorias": 360,
+    "proteinas": 36,
+    "carbohidratos": 18,
+    "grasas": 13,
+    "preparacion": "Cocinar pescado y verduras al vapor; condimentar."
   }
 ]
